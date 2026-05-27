@@ -1,0 +1,13 @@
+{
+  "autoMemoryEnabled": false,
+  "permissions": {
+    "allow": [
+      "Bash(uv run pytest:*)",
+      "Bash(uv run ruff:*)",
+      "Bash(rm workshop.db)",
+      "Bash(rm -f workshop.db)",
+      "Bash(find:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
