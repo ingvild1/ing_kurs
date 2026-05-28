@@ -5,7 +5,7 @@ from fastapi.staticfiles import StaticFiles
 
 from . import models  # noqa: F401 — register tables on Base before create_all
 from .database import REPO_ROOT, Base, engine
-from .routers import health, pings
+from .routers import health, pings, prices
 
 FRONTEND_DIR = REPO_ROOT / "frontend"
 if not FRONTEND_DIR.is_dir():
@@ -26,6 +26,7 @@ app = FastAPI(title="Agentic Coding Workshop", lifespan=lifespan)
 # REQ-015 — API endpoints under /api/
 app.include_router(health.router, prefix="/api")
 app.include_router(pings.router, prefix="/api")
+app.include_router(prices.router, prefix="/api")
 
 # REQ-014 — mount frontend at /, serving index.html as default.
 # MUST come AFTER the API routers, otherwise the StaticFiles mount swallows /api/* requests.

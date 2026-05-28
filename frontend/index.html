@@ -1,35 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Agentic Coding Workshop</title>
-  <!--
-    Tailwind CSS v4.3.0 @tailwindcss/browser runtime, vendored locally for learning and prototyping.
-    Production deployments should swap this in-browser runtime for a Tailwind CLI build
-    (see https://tailwindcss.com/docs/installation).
-  -->
-  <script src="vendor/tailwind.js" defer></script>
+  <title>Strømpriser – ladevarsler</title>
+  <script src="vendor/tailwind.js"></script>
+  <script src="vendor/react.js" defer></script>
+  <script src="vendor/react-dom.js" defer></script>
+  <script src="vendor/htm.js" defer></script>
   <script src="app.js" defer></script>
 </head>
 <body class="min-h-screen bg-slate-50 text-slate-900 font-sans">
-  <main class="max-w-xl mx-auto p-8 space-y-6">
-    <h1 class="text-3xl font-bold">Agentic Coding Workshop</h1>
-    <p class="text-slate-600">
-      Smoke test — confirms the backend, database, static-file serving, and frontend→backend call all work.
-    </p>
-
-    <section class="rounded-lg border border-slate-200 bg-white p-4 space-y-3">
-      <div>Backend health: <span id="status" class="font-mono">loading…</span></div>
-      <div id="ping-count" class="font-mono">Pings: …</div>
-      <button id="send-ping" type="button"
-              class="rounded bg-slate-900 text-white px-4 py-2 hover:bg-slate-700">
-        Send ping
-      </button>
-    </section>
-
-    <div id="error" role="alert"
-         class="rounded-lg border border-red-300 bg-red-50 text-red-800 p-4" hidden></div>
-  </main>
+  <div id="root"></div>
 </body>
 </html>

@@ -1,7 +1,12 @@
 {
   "autoMemoryEnabled": false,
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
   "permissions": {
     "allow": [
+      "Bash",
+      "PowerShell",
       "Bash(uv run pytest:*)",
       "Bash(uv run ruff:*)",
       "Bash(rm workshop.db)",
@@ -9,5 +14,9 @@
       "Bash(find:*)",
       "Bash(grep:*)"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "powershell -NoProfile -File \".claude/statusline-tokens.ps1\""
   }
 }
